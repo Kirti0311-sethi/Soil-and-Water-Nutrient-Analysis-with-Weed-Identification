@@ -1,0 +1,18 @@
+<link rel="stylesheet" href="/static/style.css">
+<body class="light-bg">
+<div class="form-container">
+
+<h2>Result</h2>
+
+<img src="/{{ image_path }}" width="350"><br><br>
+
+{% if weed_detected %}
+<h3 style="color:red;">{{ msg.weed_detected }}</h3>
+<p>{{ msg.confidence }}: {{ confidence }}</p>
+<p style="color:red;">{{ msg.remove }}</p>
+{% else %}
+<h3 style="color:green;">{{ msg.clean }}</h3>
+{% endif %}
+
+</div>
+</body>

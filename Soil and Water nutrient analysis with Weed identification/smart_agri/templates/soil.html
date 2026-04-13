@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/static/style.css">
+<body class="light-bg">
+<div class="form-container">
+<h2>{{ msg.soil }}</h2>
+{% if error %}
+<p style="color:red; font-weight:bold;">{{ error }}</p>
+{% endif %}
+<form method="POST">
+<input type="number" name="n" placeholder="{{ msg.nitrogen }}" required>
+<input type="number" name="ph" placeholder="{{ msg.ph }}" required>
+<button>{{ msg.submit }}</button>
+</form>
+</div>
+</body>
